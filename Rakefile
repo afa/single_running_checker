@@ -11,7 +11,7 @@ begin
     gem.homepage = "http://github.com/afa/single_running_checker"
     gem.authors = ["afa"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
-    gem.add_dependency('sys-proctable', '>= 0.9.0')
+    gem.add_dependency('sys-proctable', '>= 0.8.1')
 
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
