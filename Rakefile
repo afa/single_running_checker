@@ -5,12 +5,14 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "single_running_checker"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{rake task helper, allowing check if task already running}
+    gem.description = %Q{strongly single task running}
     gem.email = "afa.alone@gmail.com"
     gem.homepage = "http://github.com/afa/single_running_checker"
     gem.authors = ["afa"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
+    gem.add_dependency('sys-proctable', '>= 0.9.0')
+
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new

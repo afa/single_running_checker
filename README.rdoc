@@ -1,6 +1,21 @@
 = single_running_checker
 
-Description goes here.
+A simple method that checks the existence of an already running rake tasks (as the PID file and task name) and telling the task is running or not.
+== Usage
+in config/environment.rb:
+ config.gem "single_running_checker"
+
+and in .rake file:
+ require "single_running_checker"
+ include SingleRunningChecker
+
+...
+
+ task :some_task => :environment do
+  do_something until task_running?('some_task')
+ end
+
+ task_running?(name, only_check=false) returns true when found pid-file (in tmp/pids) and process command line contains name. If only_check true, method will not create pid-file.
 
 == Note on Patches/Pull Requests
  
